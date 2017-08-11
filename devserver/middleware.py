@@ -1,9 +1,7 @@
-from django.utils.deprecation import MiddlewareMixin
-
 from devserver.models import MODULES
 
 
-class DevServerMiddleware(MiddlewareMixin):
+class DevServerMiddleware(object):
     def should_process(self, request):
         from django.conf import settings
 
