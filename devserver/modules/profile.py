@@ -109,6 +109,7 @@ else:
                 if (DEVSERVER_AUTO_PROFILE):
                     request.devserver_profiler.disable_by_count()
                 request.devserver_profiler.print_stats(stream=out)
+                out.flush()
                 self.logger.info(out.getvalue())
 
     def _unwrap_closure_and_profile(profiler, func):
